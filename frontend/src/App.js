@@ -1,41 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
+import ChatPage from "./pages/ChatPage";
+import SummaryPage from "./pages/SummaryPage";
 
-function App() {
-    const [users, setUsers] = useState([]);
-    const [error, setError] = useState(null);
-
-    const fetchUsers = async () => {
-        try {
-            const url = `${process.env.REACT_APP_API_BASE_URL}/api/users`;
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            const data = await response.json();
-            setUsers(data);
-        } catch (err) {
-            setError(err.message);
-            console.error("Error fetching data:", err);
-        }
-    };
-
-    useEffect(() => {
-        fetchUsers();
-    }, []);
+const App = () => {
+    console.log("App is rendering");
 
     return (
-        <div>
-            <h1>User List</h1>
-            {error && <p style={{ color: "red" }}>Error: {error}</p>}
-            <ul>
-                {users.map((user) => (
-                    <li key={user.id}>
-                        {user.name} - {user.email}
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/chat" element={<ChatPage />} />
+                <Route path="/summary" element={<SummaryPage />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/signup" element={<SignupPage />} />
+            </Routes>
+        </Router>
     );
-}
+    
+};
 
 export default App;

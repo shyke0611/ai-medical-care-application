@@ -1,0 +1,52 @@
+/* Modal Title */
+.infoModal-title {
+    font-weight: bold !important;
+    text-align: center;
+  }
+  
+  /* Disclaimer */
+  .infoModal-disclaimer {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #6c757d; /* Neutral grey for secondary text */
+  }
+  
+  /* Section Headers */
+  .infoModal-header {
+    font-weight:bold !important;
+    margin-top: 20px;
+    font-size: 1.25rem; /* Larger size for emphasis */
+    color: #333;
+  }
+  
+  /* Paragraphs */
+  .infoModal-paragraph {
+    margin-bottom:20px !important;
+    margin-top:10px !important;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Lists */
+  .infoModal-list {
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .infoModal-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  /* Links */
+  .infoModal-link {
+    text-decoration: none;
+    color: #1976d2;
+    font-weight: bold;
+  }
+  
+  .infoModal-link:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,196 @@
+/* Navbar Container */
+.navbar {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* Toolbar Styling */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+/* Left Section: Logo */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Logo Styling */
+.navbar-logo {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+}
+
+.navbar-logo-link {
+  text-decoration: none;
+}
+
+/* Right Section: Icons and Buttons */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Icon Button Styling */
+.navbar-icon {
+  color: white !important; /* White icons */
+}
+
+.navbar-icon:hover {
+  background-color: #045fa8 !important;
+}
+
+/* Button Styling for Signup and Login */
+.navbar-button {
+  color: white !important;
+  text-transform: none;
+  padding: 5px 15px;
+  font-weight: 900 !important;
+}
+
+.bordered {
+  border: 2px solid white !important;
+  border-radius: 5px;
+}
+
+.navbar-button:hover {
+  background-color: #ffffff;
+  color: #000000 !important;
+}
+
+/* Divider Styling */
+.navbar-divider {
+  height: 40px;
+  width: 1px;
+  background-color: white;
+  margin: 0 10px;
+}
+
+/* Highlight for active icons */
+.active-icon {
+  color: rgb(255, 255, 255) !important;
+  background-color: #054579 !important;
+}
+
+/* Highlight for active buttons (Signup and Login) */
+.active-button {
+  background-color: white !important;
+  color: black !important; 
+  font-weight: bold !important;
+}
+
+/* Hide desktop navigation on small screens */
+.desktop-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+}
+
+/* Drawer Styling */
+.drawer-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 200px;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Scrollable Content (Menu + Footer) */
+.drawer-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Drawer List (Main Menu Items) */
+.drawer-list {
+  flex-grow: 1;
+  margin-bottom: 16px;
+}
+
+/* Drawer Footer (Signup and Login Buttons) */
+.drawer-footer {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; 
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Drawer Item */
+.drawer-item {
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+  color: black;
+}
+
+/* Disable hover effect for drawer icons */
+.drawer-item .drawer-icon:hover {
+  background-color: transparent !important;
+}
+
+/* Optionally, you can also disable any pointer effects */
+.drawer-item .drawer-icon {
+  pointer-events: none;
+  color: black;
+}
+
+/* Drawer Icon */
+.drawer-icon {
+  margin-right: 10px;
+  color: inherit;
+}
+
+/* Active Drawer Item */
+.drawer-item.active-item {
+  background-color: #045fa8;
+  color: white;
+}
+
+.drawer-item.active-item .drawer-icon {
+  color: white;
+}
+
+/* Drawer Item Hover */
+.drawer-item.active-item:hover {
+  background-color: #064c85 !important;
+}
+
+/* Scrollbar Styling for Drawer */
+.drawer-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.drawer-menu::-webkit-scrollbar-thumb {
+  background-color: #045fa8;
+  border-radius: 10px;
+}
+
+

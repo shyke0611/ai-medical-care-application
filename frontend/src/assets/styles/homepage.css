@@ -1,0 +1,77 @@
+/* Main Container */
+.homepage-container {
+  display: flex;
+  align-items: flex-start; /* Move content closer to the top */
+  justify-content: flex-start; /* Keep content slightly to the left */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  overflow: hidden; /* Prevent scrolling */
+  padding: 5% 10%; /* Adjusts spacing - increase 5% to move higher */
+  box-sizing: border-box;
+}
+
+
+/* Left Section: Text & Buttons */
+.homepage-content {
+  max-width: 500px;
+  text-align: left;
+}
+
+/* Title Styling */
+.homepage-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px; /* Increase space below title */
+  line-height: 1.4; /* Adjust line spacing */
+}
+
+/* Description Styling */
+.homepage-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px; /* Increase space between description and buttons */
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Button Container */
+.homepage-buttons {
+  display: flex;
+  gap: 20px; /* Increase space between buttons */
+  flex-wrap: wrap; /* Allows buttons to move to the next line */
+  justify-content: flex-start;
+}
+
+
+/* Buttons */
+.homepage-button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  white-space: nowrap; /* Prevents text from breaking into a new line */
+  min-width: 180px; /* Ensures consistent button width */
+}
+
+/* Stack buttons on smaller screens */
+@media (max-width: 600px) {
+  .homepage-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-start; /* Align buttons to the left */
+  }
+}
+
+/* Right Section: Animation */
+.homepage-animation {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px; /* Adjust based on animation size */
+}
+
+
+
+
+
+
+
+
